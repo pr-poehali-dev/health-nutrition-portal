@@ -2,10 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [showFloatingButton, setShowFloatingButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowFloatingButton(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const articles = [
     {
@@ -487,6 +496,41 @@ const Index = () => {
 
       <footer className="py-12 px-4 bg-gray-900 text-white">
         <div className="container mx-auto">
+          <div className="mb-12 p-6 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 rounded-2xl">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <Icon name="Sparkles" className="text-white" size={28} />
+                </div>
+                <div className="text-center md:text-left">
+                  <h3 className="font-bold text-xl mb-1">Лучшие добавки для здоровья</h3>
+                  <p className="text-sm text-white/80">Качественные витамины и пробиотики с доставкой</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <a 
+                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+                    Каталог
+                    <Icon name="ExternalLink" className="ml-2" size={18} />
+                  </Button>
+                </a>
+                <a 
+                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
+                    Скидки
+                    <Icon name="Tag" className="ml-2" size={18} />
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -539,8 +583,26 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {showFloatingButton && (
+        <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+          <a 
+            href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover-scale rounded-full px-6 py-6"
+            >
+              <Icon name="ShoppingCart" className="mr-2" size={20} />
+              Добавки
+            </Button>
+          </a>
+        </div>
+      )}
     </div>
   );
-};
+};}
 
 export default Index;
