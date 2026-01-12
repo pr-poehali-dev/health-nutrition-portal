@@ -187,6 +187,30 @@ const Index = () => {
               </CardHeader>
             </Card>
           </div>
+          
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="p-8 bg-gradient-to-r from-pink-50 via-purple-50 to-blue-50 rounded-3xl border-2 border-purple-200 hover-scale">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Gift" className="text-white" size={32} />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-bold text-2xl mb-2">Специальное предложение</h3>
+                  <p className="text-muted-foreground">Витамины и добавки для здоровья со скидками до 40%</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                    Получить скидку
+                    <Icon name="ExternalLink" className="ml-2" size={20} />
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -323,8 +347,32 @@ const Index = () => {
             <img
               src="https://cdn.poehali.dev/projects/ba003aaf-df9f-4ab9-9df7-6416a9249dac/files/7df91401-2e37-49b1-96d6-d02c163dbe35.jpg"
               alt="Онлайн вебинары"
-              className="rounded-3xl shadow-2xl max-w-2xl mx-auto"
+              className="rounded-3xl shadow-2xl max-w-2xl mx-auto mb-8"
             />
+          </div>
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="p-6 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border-2 border-cyan-200 hover-scale">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center flex-shrink-0">
+                  <Icon name="ShoppingBag" className="text-white" size={24} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1">Рекомендуем участникам вебинаров</h3>
+                  <p className="text-sm text-muted-foreground">Качественные добавки для поддержки здоровья ЖКТ</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-cyan-500 hover:bg-cyan-600">
+                    Узнать больше
+                    <Icon name="ArrowRight" className="ml-2" size={16} />
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -363,12 +411,60 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto mb-12">
             <img
               src="https://cdn.poehali.dev/projects/ba003aaf-df9f-4ab9-9df7-6416a9249dac/files/37a8b782-bb29-493f-ac68-f11e599788db.jpg"
               alt="Консультации нутрициолога"
               className="rounded-3xl shadow-2xl"
             />
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 hover-scale">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
+                  <Icon name="Heart" className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-2">Поддержка здоровья кишечника</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Пробиотики и добавки, рекомендованные специалистами</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className="w-full bg-green-500 hover:bg-green-600">
+                    Посмотреть каталог
+                    <Icon name="ExternalLink" className="ml-2" size={16} />
+                  </Button>
+                </a>
+              </div>
+            </div>
+
+            <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border-2 border-amber-200 hover-scale">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center">
+                  <Icon name="Star" className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-2">Проверенное качество</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Натуральные нутрицевтики для вашего здоровья</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className="w-full bg-amber-500 hover:bg-amber-600">
+                    Выбрать добавки
+                    <Icon name="ExternalLink" className="ml-2" size={16} />
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
