@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Track click with valid data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "linkId": "link1",
+        "linkUrl": "https://example.com",
+        "linkName": "Test Link"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Reject missing linkId",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "linkUrl": "https://example.com"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

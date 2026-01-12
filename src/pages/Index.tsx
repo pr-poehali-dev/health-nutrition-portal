@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { useState, useEffect } from "react";
+import { trackAffiliateClick, AFFILIATE_LINKS } from "@/utils/analytics";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -208,9 +209,10 @@ const Index = () => {
                   <p className="text-muted-foreground">Витамины и добавки для здоровья со скидками до 40%</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  href={AFFILIATE_LINKS.link2.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link2.id, AFFILIATE_LINKS.link2.url, AFFILIATE_LINKS.link2.name)}
                 >
                   <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
                     Получить скидку
@@ -269,9 +271,10 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">Проверенные пробиотики и витамины со скидкой</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  href={AFFILIATE_LINKS.link1.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link1.id, AFFILIATE_LINKS.link1.url, AFFILIATE_LINKS.link1.name)}
                 >
                   <Button className="bg-orange-500 hover:bg-orange-600">
                     Перейти
@@ -291,9 +294,10 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">Качественные нутрицевтики с доставкой</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  href={AFFILIATE_LINKS.link2.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link2.id, AFFILIATE_LINKS.link2.url, AFFILIATE_LINKS.link2.name)}
                 >
                   <Button className="bg-purple-500 hover:bg-purple-600">
                     Перейти
@@ -371,9 +375,10 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">Качественные добавки для поддержки здоровья ЖКТ</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  href={AFFILIATE_LINKS.link1.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link1.id, AFFILIATE_LINKS.link1.url, AFFILIATE_LINKS.link1.name)}
                 >
                   <Button className="bg-cyan-500 hover:bg-cyan-600">
                     Узнать больше
@@ -439,10 +444,11 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mb-4">Пробиотики и добавки, рекомендованные специалистами</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  href={AFFILIATE_LINKS.link2.url}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link2.id, AFFILIATE_LINKS.link2.url, AFFILIATE_LINKS.link2.name)}
                 >
                   <Button className="w-full bg-green-500 hover:bg-green-600">
                     Посмотреть каталог
@@ -462,10 +468,11 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mb-4">Натуральные нутрицевтики для вашего здоровья</p>
                 </div>
                 <a 
-                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  href={AFFILIATE_LINKS.link1.url}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link1.id, AFFILIATE_LINKS.link1.url, AFFILIATE_LINKS.link1.name)}
                 >
                   <Button className="w-full bg-amber-500 hover:bg-amber-600">
                     Выбрать добавки
@@ -509,9 +516,10 @@ const Index = () => {
               </div>
               <div className="flex gap-3">
                 <a 
-                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  href={AFFILIATE_LINKS.link1.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link1.id, AFFILIATE_LINKS.link1.url, AFFILIATE_LINKS.link1.name)}
                 >
                   <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
                     Каталог
@@ -519,9 +527,10 @@ const Index = () => {
                   </Button>
                 </a>
                 <a 
-                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  href={AFFILIATE_LINKS.link2.url}
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link2.id, AFFILIATE_LINKS.link2.url, AFFILIATE_LINKS.link2.name)}
                 >
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
                     Скидки
@@ -587,9 +596,10 @@ const Index = () => {
       {showFloatingButton && (
         <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
           <a 
-            href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+            href={AFFILIATE_LINKS.link1.url}
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => trackAffiliateClick(AFFILIATE_LINKS.link1.id, AFFILIATE_LINKS.link1.url, AFFILIATE_LINKS.link1.name)}
           >
             <Button 
               size="lg" 

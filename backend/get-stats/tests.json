@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "name": "Get stats successfully",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "totalClicks": "number",
+        "links": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
