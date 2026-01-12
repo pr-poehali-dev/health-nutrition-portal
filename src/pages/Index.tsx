@@ -225,18 +225,49 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="mt-12 p-6 bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl border-2 border-orange-200">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
-                <Icon name="ExternalLink" className="text-white" size={24} />
+          <div className="mt-12 space-y-6">
+            <div className="p-6 bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl border-2 border-orange-200 hover-scale">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Package" className="text-white" size={24} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1">Лучшие добавки для здоровья ЖКТ</h3>
+                  <p className="text-sm text-muted-foreground">Проверенные пробиотики и витамины со скидкой</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=331518&o=333012&idp=318536&erid=2VtzqxUrE2N" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-orange-500 hover:bg-orange-600">
+                    Перейти
+                    <Icon name="ExternalLink" className="ml-2" size={16} />
+                  </Button>
+                </a>
               </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Рекомендуем: Лучшие пробиотики 2024</h3>
-                <p className="text-sm text-muted-foreground">Независимое сравнение популярных добавок</p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-2 border-purple-200 hover-scale">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Sparkles" className="text-white" size={24} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1">Специальное предложение для здоровья</h3>
+                  <p className="text-sm text-muted-foreground">Качественные нутрицевтики с доставкой</p>
+                </div>
+                <a 
+                  href="https://ihclick.ru/?p=240274&o=318379&idp=318536&erid=2Vtzqw8BvxZ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-purple-500 hover:bg-purple-600">
+                    Перейти
+                    <Icon name="ExternalLink" className="ml-2" size={16} />
+                  </Button>
+                </a>
               </div>
-              <Button className="bg-orange-500 hover:bg-orange-600">
-                Посмотреть
-              </Button>
             </div>
           </div>
         </div>
